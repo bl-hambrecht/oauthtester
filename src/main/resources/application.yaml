@@ -1,0 +1,15 @@
+ktor:
+    application:
+        modules:
+            - de.bikeleasing.ApplicationKt.module
+    deployment:
+        port: 8080
+
+security:
+    oauth:
+        authorizeUrl: "https://auth.int.bikeleasing.de/realms/bikeleasing/protocol/openid-connect/auth"
+        accessTokenUrl: "https://auth.int.bikeleasing.de/realms/bikeleasing/protocol/openid-connect/token"
+        clientId: "oneportal"
+        clientSecret: ""
+        defaultScopes: ["basic profile"]
+        requestMethod: "POST"
